@@ -1,0 +1,42 @@
+<head>
+  <title>meteor-test</title>
+</head>
+
+<body>
+  <!-- 對應到router.ts檔中用BlazeLayout.setRoot('.root')去選擇畫面重劃地方 -->
+  <div class="header">
+    <h1>This is header</h1>
+  </div>
+  <div class="root">
+
+  </div>
+</body>
+
+<template name="home">
+  <h1>Root</h1>
+  <button id="go">GO</button>
+</template>
+
+<template name="hello">
+  <h1>Hello</h1>
+  <h1>Hello</h1>
+  <h1>Hello</h1>
+</template>
+
+<template name="info">
+  <div class="info">
+    <h1>Info</h1>
+    <h1>Info</h1>
+    <h1>Info</h1>
+  </div>
+</template>
+
+<template name="joanna">
+  <div class="joanna">
+    <h1>This is {{name}}</h1>
+    {{#each task}}
+    <h3>Hello {{param}}</h3>
+    {{/each}}
+    {{#if user}} {{>info}} {{/if}}
+  </div>
+</template>
